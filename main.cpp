@@ -108,37 +108,37 @@ bool loadMedia()
         gBlockClips[0].x = 0;
         gBlockClips[0].y = 133;
         gBlockClips[0].w = 533;
-        gBlockClips[0].h = 266;
+        gBlockClips[0].h = 133;
 
-        gBlockClips[1].x = 0;
+        gBlockClips[1].x = 666;
         gBlockClips[1].y = 0;
-        gBlockClips[1].w = 0;
-        gBlockClips[1].h = 0;
+        gBlockClips[1].w = 400;
+        gBlockClips[1].h = 266;
 
-        gBlockClips[2].x = 0;
+        gBlockClips[2].x = 1200;
         gBlockClips[2].y = 0;
-        gBlockClips[2].w = 0;
-        gBlockClips[2].h = 0;
+        gBlockClips[2].w = 400;
+        gBlockClips[2].h = 266;
 
-        gBlockClips[3].x = 0;
+        gBlockClips[3].x = 1733;
         gBlockClips[3].y = 0;
-        gBlockClips[3].w = 0;
-        gBlockClips[3].h = 0;
+        gBlockClips[3].w = 266;
+        gBlockClips[3].h = 266;
 
-        gBlockClips[4].x = 0;
-        gBlockClips[4].y = 0;
-        gBlockClips[4].w = 0;
-        gBlockClips[4].h = 0;
+        gBlockClips[4].x = 266;
+        gBlockClips[4].y = 400;
+        gBlockClips[4].w = 400;
+        gBlockClips[4].h = 266;
 
-        gBlockClips[5].x = 0;
-        gBlockClips[5].y = 0;
-        gBlockClips[5].w = 0;
-        gBlockClips[5].h = 0;
+        gBlockClips[5].x = 800;
+        gBlockClips[5].y = 400;
+        gBlockClips[5].w = 400;
+        gBlockClips[5].h = 266;
 
-        gBlockClips[6].x = 0;
-        gBlockClips[6].y = 0;
-        gBlockClips[6].w = 0;
-        gBlockClips[6].h = 0;
+        gBlockClips[6].x = 1333;
+        gBlockClips[6].y = 400;
+        gBlockClips[6].w = 400;
+        gBlockClips[6].h = 266;
     }
 
     return success;
