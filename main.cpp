@@ -38,6 +38,11 @@ int main(int argc, char** argv){
                     {
                         quit = true;
                     }
+
+                    SDL_Rect* currentBlockClip = &gBlockClips[0];
+                    gBlockSheet.render((SCREEN_WIDTH - currentBlockClip->w) / 2, (SCREEN_HEIGHT - currentBlockClip->h) / 2, currentBlockClip);
+
+                    SDL_RenderPresent(gRenderer);
                 }
             }
         }
@@ -92,6 +97,49 @@ bool init()
 bool loadMedia()
 {
     bool success = true;
+
+    if (!gBlockSheet.loadFromFile("images/blocks.png"))
+    {
+        printf("Failed to load blocks sheet !\n");
+        success = false;
+    }
+    else
+    {
+        gBlockClips[0].x = 0;
+        gBlockClips[0].y = 133;
+        gBlockClips[0].w = 533;
+        gBlockClips[0].h = 266;
+
+        gBlockClips[1].x = 0;
+        gBlockClips[1].y = 0;
+        gBlockClips[1].w = 0;
+        gBlockClips[1].h = 0;
+
+        gBlockClips[2].x = 0;
+        gBlockClips[2].y = 0;
+        gBlockClips[2].w = 0;
+        gBlockClips[2].h = 0;
+
+        gBlockClips[3].x = 0;
+        gBlockClips[3].y = 0;
+        gBlockClips[3].w = 0;
+        gBlockClips[3].h = 0;
+
+        gBlockClips[4].x = 0;
+        gBlockClips[4].y = 0;
+        gBlockClips[4].w = 0;
+        gBlockClips[4].h = 0;
+
+        gBlockClips[5].x = 0;
+        gBlockClips[5].y = 0;
+        gBlockClips[5].w = 0;
+        gBlockClips[5].h = 0;
+
+        gBlockClips[6].x = 0;
+        gBlockClips[6].y = 0;
+        gBlockClips[6].w = 0;
+        gBlockClips[6].h = 0;
+    }
 
     return success;
 }
