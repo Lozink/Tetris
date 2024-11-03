@@ -8,6 +8,9 @@
 #define SCREEN_WIDTH 720 
 #define SCREEN_HEIGHT 900
 
+int gCurrentX = 400;
+int gCurrentY = 400;
+
 bool init();
 
 bool loadMedia();
@@ -38,9 +41,24 @@ int main(int argc, char** argv){
                     {
                         quit = true;
                     }
+                    else if (e.type = SDL_KEYDOWN)
+                    {
+                        switch (e.key.keysym.sym)
+                        {
+                            case SDLK_LEFT:
+                                gCurrentX -= 133;
+                                break;
 
-                    SDL_Rect* currentBlockClip = &gBlockClips[0];
-                    gBlockSheet.render((SCREEN_WIDTH - currentBlockClip->w) / 2, (SCREEN_HEIGHT - currentBlockClip->h) / 2, currentBlockClip);
+                            case SDLK_RIGHT:
+                                gCurrentX += 133;
+                                break;
+                        }
+                    }
+                    SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+                    SDL_RenderClear(gRenderer);
+
+                    SDL_Rect* currentBlockClip = &gBlockClips[1];
+                    gBlockSheet.render(gCurrentX, gCurrentY, currentBlockClip);
 
                     SDL_RenderPresent(gRenderer);
                 }
